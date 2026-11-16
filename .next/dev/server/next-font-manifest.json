@@ -1,0 +1,13 @@
+{
+  "app": {
+    "[project]/app/about/page": [
+      "static/media/660acf689794c992-s.p.2_mbdogr7ni8i.woff2"
+    ],
+    "[project]/app/page": [
+      "static/media/660acf689794c992-s.p.2_mbdogr7ni8i.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}
