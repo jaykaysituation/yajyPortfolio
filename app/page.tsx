@@ -33,28 +33,28 @@ export default function Home() {
         <a className="wordmark" href="#home" aria-label="Juliane Mariano home">JM<span>.</span></a>
         <nav className="navigation" aria-label="Main navigation">
           <a href="#home">HOME</a>
-          <a href="/about">ABOUT</a>
+          <a href="/about">BACKGROUND</a>
           <a href="mailto:julianekm02@gmail.com">CONTACT <span aria-hidden="true">↗</span></a>
         </nav>
         <span className="topbar-note">PORTFOLIO / 2026</span>
       </header>
 
       <section className="hero" id="home" aria-labelledby="hero-title">
-        <div className="nameplate">
-          <p className="overline">JULIANE KARL A. MARIANO <span>— PERSONAL PORTFOLIO</span></p>
-          <h1 id="hero-title">Juliane Mariano</h1>
+        <div className="nameplate home-text-motion">
+          <p className="overline home-text-item">JULIANE KARL A. MARIANO <span>— PERSONAL PORTFOLIO</span></p>
+          <h1 className="home-text-item" id="hero-title">Juliane Mariano</h1>
         </div>
 
         <div className="hero-main" id="focus">
-          <div className="hero-copy">
-            <p className="hero-kicker"><span className="status-dot" /> INFORMATION TECHNOLOGY · OPERATIONS</p>
-            <p className="hero-statement">
+          <div className="hero-copy home-text-motion">
+            <p className="hero-kicker home-text-item"><span className="status-dot" /> INFORMATION TECHNOLOGY · OPERATIONS</p>
+            <p className="hero-statement home-text-item">
               I bring people and technology together through thoughtful support and dependable systems.
             </p>
-            <div className="skill-list" aria-label="Areas of experience">
-              {skills.map((skill) => <span className="skill-tag" key={skill}>{skill}</span>)}
+            <div className="skill-list home-text-item" aria-label="Areas of experience">
+              {skills.map((skill) => <span className="skill-tag home-text-item" key={skill}>{skill}</span>)}
             </div>
-            <a className="hero-link" href="mailto:julianekm02@gmail.com">
+            <a className="hero-link home-text-item" href="mailto:julianekm02@gmail.com">
               GET IN TOUCH <span aria-hidden="true">↗</span>
             </a>
           </div>
@@ -64,10 +64,10 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="hero-footer">
-        <span>BASED IN SAN ANTONIO, LOS BAÑOS, LAGUNA</span>
-        <span>INFORMATION TECHNOLOGY · E-COMMERCE · SUPPORT</span>
-        <a href="mailto:julianekm02@gmail.com">LET&apos;S CONNECT <span aria-hidden="true">↗</span></a>
+      <footer className="hero-footer home-text-motion">
+        <span className="home-text-item">BASED IN LOS BAÑOS, LAGUNA</span>
+        <span className="home-text-item">INFORMATION TECHNOLOGY · E-COMMERCE · SUPPORT</span>
+        <a className="home-text-item" href="mailto:julianekm02@gmail.com">LET&apos;S CONNECT <span aria-hidden="true">↗</span></a>
       </footer>
     </main>
   );

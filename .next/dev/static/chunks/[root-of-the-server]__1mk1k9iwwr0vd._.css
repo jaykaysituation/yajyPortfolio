@@ -374,6 +374,15 @@ a {
   border-left: 0;
 }
 
+.navigation a {
+  transition: background-color .18s, color .18s;
+}
+
+.navigation a:hover, .navigation a:focus-visible {
+  color: var(--red-deep);
+  background: #6d717814;
+}
+
 .navigation a span, .hero-link span, .hero-footer a span {
   margin-left: 8px;
   font-size: 14px;
@@ -467,14 +476,28 @@ h1 {
   font-size: 9px;
 }
 
+.skill-list .skill-tag {
+  transition: scale .18s;
+}
+
+.skill-list .skill-tag:hover {
+  scale: 1.04;
+}
+
 .hero-link {
   letter-spacing: .12em;
+  transform-origin: 0;
   border-bottom: 1px solid #f1efeba6;
   align-items: center;
   margin-top: 34px;
   padding-bottom: 8px;
   font-size: 10px;
+  transition: scale .18s;
   display: inline-flex;
+}
+
+.hero-link:hover, .hero-link:focus-visible, .hero-footer a:hover, .hero-footer a:focus-visible {
+  scale: 1.04;
 }
 
 .systems-art {
@@ -507,9 +530,14 @@ h1 {
   background: var(--paper);
   width: min(100%, 410px);
   color: var(--ink);
+  transition: rotate .22s;
   position: relative;
   transform: rotate(-4deg);
   box-shadow: 14px 20px 45px #420e0f38;
+}
+
+.system-card:hover {
+  rotate: 4deg;
 }
 
 .system-card__top {
@@ -620,7 +648,9 @@ h1 {
 }
 
 .hero-footer a {
+  transform-origin: 100%;
   align-items: center;
+  transition: scale .18s;
   display: flex;
 }
 
@@ -765,6 +795,11 @@ h1 {
 
 .about-skills .skill-tag {
   border-color: var(--line);
+  transition: scale .18s;
+}
+
+.about-skills .skill-tag:hover, .about-skills .skill-tag:focus-visible {
+  scale: 1.04;
 }
 
 .about-skills--stack .skill-tag {
@@ -784,16 +819,64 @@ h1 {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .about-page .motion-enter {
+  .motion-enter {
     animation: .65s cubic-bezier(.2, .75, .2, 1) both about-enter;
   }
 
-  .about-page .motion-delay-one {
+  .motion-delay-one {
     animation-delay: .13s;
   }
 
-  .about-page .motion-delay-two {
+  .motion-delay-two {
     animation-delay: .24s;
+  }
+
+  .home-text-item {
+    animation: .65s cubic-bezier(.2, .75, .2, 1) both about-enter;
+  }
+
+  .nameplate .home-text-item:first-child {
+    animation-delay: 0s;
+  }
+
+  .nameplate .home-text-item:nth-child(2) {
+    animation-delay: .1s;
+  }
+
+  .hero-copy > .home-text-item:first-child {
+    animation-delay: .2s;
+  }
+
+  .hero-copy > .home-text-item:nth-child(2) {
+    animation-delay: .3s;
+  }
+
+  .hero-copy > .home-text-item:nth-child(3) .home-text-item:first-child {
+    animation-delay: .4s;
+  }
+
+  .hero-copy > .home-text-item:nth-child(3) .home-text-item:nth-child(2) {
+    animation-delay: .48s;
+  }
+
+  .hero-copy > .home-text-item:nth-child(3) .home-text-item:nth-child(3) {
+    animation-delay: .56s;
+  }
+
+  .hero-copy > .home-text-item:nth-child(4) {
+    animation-delay: .62s;
+  }
+
+  .hero-footer > .home-text-item:first-child {
+    animation-delay: .72s;
+  }
+
+  .hero-footer > .home-text-item:nth-child(2) {
+    animation-delay: .82s;
+  }
+
+  .hero-footer > .home-text-item:nth-child(3) {
+    animation-delay: .92s;
   }
 
   .about-page .skills-group {
@@ -969,7 +1052,7 @@ h1 {
 
 @media (prefers-reduced-motion: no-preference) {
   .system-card {
-    animation: .7s cubic-bezier(.2, .75, .2, 1) both card-arrive;
+    animation: .7s cubic-bezier(.2, .75, .2, 1) .4s both card-arrive;
   }
 
   .orbit-one {
@@ -998,6 +1081,12 @@ h1 {
       opacity: 1;
       transform: scale(1.03);
     }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-link, .hero-footer a, .about-skills .skill-tag, .skill-list .skill-tag, .system-card {
+    transition: none;
   }
 }
 

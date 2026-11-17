@@ -205,7 +205,7 @@ function Home() {
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                 href: "/about",
-                                children: "ABOUT"
+                                children: "BACKGROUND"
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
                                 lineNumber: 36,
@@ -255,10 +255,10 @@ function Home() {
                 "aria-labelledby": "hero-title",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "nameplate",
+                        className: "nameplate home-text-motion",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "overline",
+                                className: "overline home-text-item",
                                 children: [
                                     "JULIANE KARL A. MARIANO ",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -266,7 +266,7 @@ function Home() {
                                     }, void 0, false, {
                                         fileName: "[project]/app/page.tsx",
                                         lineNumber: 44,
-                                        columnNumber: 59
+                                        columnNumber: 74
                                     }, this)
                                 ]
                             }, void 0, true, {
@@ -275,6 +275,7 @@ function Home() {
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                                className: "home-text-item",
                                 id: "hero-title",
                                 children: "Juliane Mariano"
                             }, void 0, false, {
@@ -293,17 +294,17 @@ function Home() {
                         id: "focus",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "hero-copy",
+                                className: "hero-copy home-text-motion",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "hero-kicker",
+                                        className: "hero-kicker home-text-item",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "status-dot"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
                                                 lineNumber: 50,
-                                                columnNumber: 40
+                                                columnNumber: 55
                                             }, this),
                                             " INFORMATION TECHNOLOGY · OPERATIONS"
                                         ]
@@ -313,7 +314,7 @@ function Home() {
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "hero-statement",
+                                        className: "hero-statement home-text-item",
                                         children: "I bring people and technology together through thoughtful support and dependable systems."
                                     }, void 0, false, {
                                         fileName: "[project]/app/page.tsx",
@@ -321,10 +322,10 @@ function Home() {
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "skill-list",
+                                        className: "skill-list home-text-item",
                                         "aria-label": "Areas of experience",
                                         children: skills.map((skill)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "skill-tag",
+                                                className: "skill-tag home-text-item",
                                                 children: skill
                                             }, skill, false, {
                                                 fileName: "[project]/app/page.tsx",
@@ -337,7 +338,7 @@ function Home() {
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                        className: "hero-link",
+                                        className: "hero-link home-text-item",
                                         href: "mailto:julianekm02@gmail.com",
                                         children: [
                                             "GET IN TOUCH ",
@@ -403,16 +404,18 @@ function Home() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
-                className: "hero-footer",
+                className: "hero-footer home-text-motion",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        children: "BASED IN SAN ANTONIO, LOS BAÑOS, LAGUNA"
+                        className: "home-text-item",
+                        children: "BASED IN LOS BAÑOS, LAGUNA"
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
                         lineNumber: 68,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: "home-text-item",
                         children: "INFORMATION TECHNOLOGY · E-COMMERCE · SUPPORT"
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
@@ -420,6 +423,7 @@ function Home() {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                        className: "home-text-item",
                         href: "mailto:julianekm02@gmail.com",
                         children: [
                             "LET'S CONNECT ",
@@ -429,7 +433,7 @@ function Home() {
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
                                 lineNumber: 70,
-                                columnNumber: 67
+                                columnNumber: 94
                             }, this)
                         ]
                     }, void 0, true, {
