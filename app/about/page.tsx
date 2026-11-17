@@ -39,7 +39,7 @@ export default function AboutPage() {
         <nav className="navigation" aria-label="Main navigation">
           <a href="/">HOME</a>
           <a href="#background">BACKGROUND</a>
-          <a href="mailto:julianekm02@gmail.com">CONTACT <span aria-hidden="true">↗</span></a>
+          <a href="/contact">CONTACT <span aria-hidden="true">↗</span></a>
         </nav>
         <span className="topbar-note">ABOUT / 02</span>
       </header>

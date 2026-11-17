@@ -54,6 +54,13 @@ a { color: inherit; text-decoration: none; }
 .overline { margin: 0 0 4px; font-size: 9px; letter-spacing: 0.13em; }
 .overline span { color: rgba(32, 36, 45, 0.52); }
 h1 { margin: 0; font-size: clamp(4rem, 10.2vw, 8.5rem); line-height: 0.96; font-weight: 400; letter-spacing: -0.085em; white-space: nowrap; }
+.nameplate h1 { transform-origin: left center; transition: color 220ms ease, transform 220ms ease, text-shadow 220ms ease; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .nameplate h1:hover { color: var(--red); transform: translateY(-3px); text-shadow: 0 5px 18px rgba(189, 48, 49, 0.12); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nameplate h1 { transition: none; }
+}
 
 .hero-main {
   min-height: 510px;
@@ -110,13 +117,25 @@ h1 { margin: 0; font-size: clamp(4rem, 10.2vw, 8.5rem); line-height: 0.96; font-
 .section-heading { display: flex; gap: 12px; align-items: baseline; border-bottom: 1px solid var(--line); padding-bottom: 13px; }
 .section-heading > span { color: var(--red); font-size: 9px; letter-spacing: 0.12em; }
 .section-heading h2 { margin: 0; font-size: 17px; font-weight: 500; letter-spacing: -0.035em; }
-.experience-card { margin-top: 27px; }
+.experience-card {
+  position: relative;
+  margin-top: 27px;
+  padding: 18px 16px;
+  border-left: 2px solid transparent;
+  transition: transform 220ms ease, border-color 220ms ease, background-color 220ms ease, box-shadow 220ms ease;
+}
 .card-date { margin: 0 0 12px; color: var(--red-deep); font-size: 8px; letter-spacing: 0.14em; }
 .experience-card h3, .education-item h3 { margin: 0; font-size: 18px; font-weight: 500; letter-spacing: -0.035em; }
 .card-role { margin: 7px 0 0; font-size: 12px; }
 .card-copy { max-width: 280px; margin: 17px 0 0; color: rgba(32, 36, 45, 0.68); font-size: 11px; line-height: 1.6; }
 .education-list { display: grid; }
-.education-item { padding: 19px 0; border-bottom: 1px solid var(--line); }
+.education-item {
+  position: relative;
+  padding: 19px 12px;
+  border-bottom: 1px solid var(--line);
+  border-left: 2px solid transparent;
+  transition: transform 220ms ease, border-color 220ms ease, background-color 220ms ease, box-shadow 220ms ease;
+}
 .education-item:last-child { padding-bottom: 0; border-bottom: 0; }
 .education-item h3 { font-size: 15px; }
 .education-item .card-date { margin-bottom: 8px; }
@@ -131,6 +150,48 @@ h1 { margin: 0; font-size: clamp(4rem, 10.2vw, 8.5rem); line-height: 0.96; font-
 .about-skills--stack .skill-tag { background: rgba(189, 48, 49, 0.06); }
 .languages-note { margin: 22px 0 0; font-size: 10px; }
 .languages-note span { margin-right: 10px; color: var(--red-deep); font-size: 8px; letter-spacing: 0.13em; }
+
+.contact-content { padding: 46px 8.5% 54px; }
+.contact-heading { text-align: center; }
+.contact-heading h1 { margin: 12px 0; white-space: normal; font-size: clamp(4rem, 9vw, 7.5rem); line-height: 0.95; }
+.contact-heading > p:last-child { margin: 0; color: rgba(32, 36, 45, 0.67); font-size: 13px; }
+.contact-layout { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(190px, 0.7fr); gap: 8%; max-width: 850px; margin: 34px auto 0; }
+.contact-form { display: grid; grid-template-columns: 1fr; }
+.contact-form label { margin: 0 0 7px; font-size: 10px; letter-spacing: 0.04em; }
+.contact-form input, .contact-form textarea { width: 100%; margin: 0 0 18px; padding: 12px 13px; border: 1px solid rgba(32, 36, 45, 0.55); border-radius: 0; outline: none; background: transparent; color: var(--ink); font: inherit; font-size: 13px; transition: border-color 180ms ease, box-shadow 180ms ease; }
+.contact-form input:focus, .contact-form textarea:focus { border-color: var(--red); box-shadow: 0 0 0 2px rgba(189, 48, 49, 0.13); }
+.contact-form textarea { min-height: 145px; resize: vertical; }
+.contact-form button { min-height: 43px; border: 0; background: var(--ink); color: var(--paper); font: inherit; font-size: 10px; letter-spacing: 0.1em; cursor: pointer; transition: background-color 180ms ease; }
+.contact-form button:hover { background: var(--red-deep); }
+.contact-form button span { margin-left: 7px; font-size: 14px; }
+.contact-form-note { margin: 9px 0 0; color: rgba(32, 36, 45, 0.61); font-size: 10px; line-height: 1.5; }
+.contact-aside { padding-top: 7px; }
+.contact-aside-label { margin: 0 0 11px; color: var(--red-deep); font-size: 8px; letter-spacing: 0.14em; }
+.contact-email { display: inline-flex; align-items: center; gap: 7px; font-size: 12px; overflow-wrap: anywhere; }
+.contact-email span { color: var(--red); }
+.social-heading { margin-top: 42px; }
+.social-list { display: grid; gap: 9px; }
+.social-item { display: flex; align-items: center; gap: 10px; min-height: 44px; border-bottom: 1px solid var(--line); font-size: 12px; }
+.social-item:hover { color: var(--red-deep); }
+.social-icon { display: grid; place-items: center; width: 27px; height: 27px; border: 1px solid var(--line); }
+.social-icon svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.social-icon .icon-fill { fill: currentColor; stroke: none; }
+.social-pending { margin-left: auto; color: rgba(32, 36, 45, 0.5); font-size: 7px; letter-spacing: 0.08em; }
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .experience-card:hover,
+  .education-item:hover {
+    transform: translateY(-4px);
+    border-left-color: var(--red);
+    background: rgba(189, 48, 49, 0.055);
+    box-shadow: 0 9px 24px rgba(32, 36, 45, 0.07);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .experience-card,
+  .education-item { transition: none; }
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .motion-enter { animation: about-enter 650ms cubic-bezier(0.2, 0.75, 0.2, 1) both; }
@@ -190,6 +251,10 @@ h1 { margin: 0; font-size: clamp(4rem, 10.2vw, 8.5rem); line-height: 0.96; font-
   .about-block + .about-block { border-left: 0; border-top: 1px solid var(--line); }
   .experience-card h3 { font-size: 17px; }
   .skills-section { padding: 25px 22px 30px; }
+  .contact-content { padding: 35px 22px 38px; }
+  .contact-heading h1 { font-size: clamp(3.5rem, 15vw, 5.4rem); }
+  .contact-layout { grid-template-columns: 1fr; gap: 34px; margin-top: 26px; }
+  .social-heading { margin-top: 27px; }
 }
 
 @media (prefers-reduced-motion: no-preference) {
