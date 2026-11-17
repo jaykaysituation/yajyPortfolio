@@ -26,20 +26,21 @@ export default function ContactPage() {
         <a className="wordmark" href="/" aria-label="Juliane Mariano home">JM<span>.</span></a>
         <nav className="navigation" aria-label="Main navigation">
           <a href="/">HOME</a>
-          <a href="/about">ABOUT</a>
-          <a href="mailto:julianekm02@gmail.com">EMAIL <span aria-hidden="true">↗</span></a>
+          <a href="/about">BACKGROUND</a>
+          <a href="/projects">PROJECTS</a>
+          <a href="#contact" aria-current="page">CONTACT <span aria-hidden="true">↗</span></a>
         </nav>
-        <span className="topbar-note">CONTACT / 03</span>
+        <span className="topbar-note">CONTACT / 04</span>
       </header>
 
-      <section className="contact-content">
-        <div className="contact-heading">
+      <section className="contact-content" id="contact">
+        <div className="contact-heading motion-enter">
           <p className="overline">HAVE AN IDEA? <span>— GET IN TOUCH</span></p>
           <h1>Let&apos;s talk.</h1>
           <p>Have a question or opportunity in mind? Send a note.</p>
         </div>
 
-        <div className="contact-layout">
+        <div className="contact-layout motion-enter motion-delay-one">
           <ContactForm />
           <aside className="contact-aside">
             <p className="contact-aside-label">DIRECT EMAIL</p>
@@ -62,7 +63,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <footer className="hero-footer">
+      <footer className="hero-footer motion-enter motion-delay-two">
         <span>BASED IN SAN ANTONIO, LOS BAÑOS, LAGUNA</span>
         <span>INFORMATION TECHNOLOGY · E-COMMERCE · SUPPORT</span>
         <a href="/about">ABOUT <span aria-hidden="true">↗</span></a>

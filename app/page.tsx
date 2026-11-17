@@ -34,6 +34,7 @@ export default function Home() {
         <nav className="navigation" aria-label="Main navigation">
           <a href="#home">HOME</a>
           <a href="/about">BACKGROUND</a>
+          <a href="/projects">PROJECTS</a>
           <a href="/contact">CONTACT <span aria-hidden="true">↗</span></a>
         </nav>
         <span className="topbar-note">PORTFOLIO / 2026</span>
