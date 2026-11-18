@@ -4,7 +4,7 @@ const education = [
   {
     school: "University of the Philippines, Open University",
     program: "Associate of Science in Information Technology",
-    dates: "September 2023 — Present",
+    dates: "September 2023 — December 2026",
   },
   {
     school: "Malayan Colleges Laguna",
