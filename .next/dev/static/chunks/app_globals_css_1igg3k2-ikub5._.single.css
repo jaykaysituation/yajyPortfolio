@@ -355,6 +355,21 @@ a {
   font-size: 14px;
 }
 
+.navigation a span, .hero-link span, .hero-footer a span, .contact-email span, .social-pending, .contact-form button span {
+  align-items: center;
+  display: inline-flex;
+}
+
+.arrow-up-right-icon {
+  stroke: currentColor;
+  stroke-width: 1.6px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  width: 1em;
+  height: 1em;
+  display: block;
+}
+
 .topbar-note {
   color: #20242d9e;
   justify-self: end;
@@ -681,25 +696,51 @@ h1 {
   right: 8%;
 }
 
-.projects-empty {
-  border-bottom: 1px solid var(--line);
-  flex-direction: column;
-  justify-content: center;
-  min-height: 220px;
-  padding: 38px 8.5%;
-  display: flex;
+.projects-list {
+  padding: 0 8.5%;
 }
 
-.projects-empty > span {
-  color: var(--red-deep);
+.project-slot {
+  border-bottom: 1px solid var(--line);
+  grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+  align-items: center;
+  gap: 7%;
+  padding: 32px 0;
+  display: grid;
+}
+
+.project-photo-placeholder {
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--line);
+  background: linear-gradient(135deg, #bd30310e, transparent 55%), var(--paper);
+  color: #20242d8a;
+  place-items: center;
+  min-height: 240px;
+  display: grid;
+}
+
+.project-photo-placeholder span, .project-description > span {
   letter-spacing: .14em;
   font-size: 8px;
 }
 
-.projects-empty p {
-  letter-spacing: -.025em;
-  margin: 13px 0 0;
-  font-size: 18px;
+.project-description > span {
+  color: var(--red-deep);
+}
+
+.project-description h2 {
+  letter-spacing: -.055em;
+  margin: 15px 0 8px;
+  font-size: clamp(1.5rem, 3vw, 2.3rem);
+  font-weight: 400;
+}
+
+.project-description p {
+  color: #20242dad;
+  max-width: 360px;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
 }
 
 .about-intro {
@@ -1072,6 +1113,18 @@ h1 {
     animation: .65s cubic-bezier(.2, .75, .2, 1) both about-enter;
   }
 
+  .projects-list .project-slot:first-child {
+    animation-delay: .1s;
+  }
+
+  .projects-list .project-slot:nth-child(2) {
+    animation-delay: .2s;
+  }
+
+  .projects-list .project-slot:nth-child(3) {
+    animation-delay: .3s;
+  }
+
   .nameplate .home-text-item:first-child {
     animation-delay: 0s;
   }
@@ -1305,13 +1358,23 @@ h1 {
     font-size: 13px;
   }
 
-  .projects-empty {
-    min-height: 180px;
-    padding: 30px 22px;
+  .projects-list {
+    padding: 0 22px;
   }
 
-  .projects-empty p {
-    font-size: 16px;
+  .project-slot {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 24px 0;
+  }
+
+  .project-photo-placeholder {
+    min-height: 190px;
+  }
+
+  .project-description h2 {
+    margin-top: 10px;
+    font-size: 1.7rem;
   }
 
   .contact-heading h1 {

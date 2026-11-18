@@ -1,6 +1,7 @@
 "use client";
 
 import type { FormEvent } from "react";
+import { ArrowUpRightIcon } from "../arrow-up-right-icon";
 
 export function ContactForm() {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -27,8 +28,9 @@ export function ContactForm() {
       <label htmlFor="contact-message">Message</label>
       <textarea id="contact-message" name="message" rows={5} required />
 
-      <button type="submit">OPEN EMAIL APP <span aria-hidden="true">↗</span></button>
+      <button type="submit">OPEN EMAIL APP <span><ArrowUpRightIcon /></span></button>
       <p className="contact-form-note">This opens your email app with a prefilled draft.</p>
     </form>
   );
 }
+

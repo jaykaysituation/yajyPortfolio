@@ -1,4 +1,5 @@
 import { ContactForm } from "./contact-form";
+import { ArrowUpRightIcon } from "../arrow-up-right-icon";
 
 function InstagramIcon() {
   return (
@@ -28,7 +29,7 @@ export default function ContactPage() {
           <a href="/">HOME</a>
           <a href="/about">BACKGROUND</a>
           <a href="/projects">PROJECTS</a>
-          <a href="#contact" aria-current="page">CONTACT <span aria-hidden="true">↗</span></a>
+          <a href="#contact" aria-current="page">CONTACT <span><ArrowUpRightIcon /></span></a>
         </nav>
         <span className="topbar-note">CONTACT / 04</span>
       </header>
@@ -44,19 +45,19 @@ export default function ContactPage() {
           <ContactForm />
           <aside className="contact-aside">
             <p className="contact-aside-label">DIRECT EMAIL</p>
-            <a className="contact-email" href="mailto:julianekm02@gmail.com">julianekm02@gmail.com <span aria-hidden="true">↗</span></a>
+            <a className="contact-email" href="mailto:julianekm02@gmail.com">julianekm02@gmail.com <span><ArrowUpRightIcon /></span></a>
 
             <p className="contact-aside-label social-heading">SOCIAL</p>
             <div className="social-list" aria-label="Social profiles">
               <a className="social-item" href="https://www.instagram.com/yeikei_2/" target="_blank" rel="noreferrer noopener" aria-label="Visit Juliane on Instagram">
                 <span className="social-icon"><InstagramIcon /></span>
                 <span>Instagram</span>
-                <span className="social-pending" aria-hidden="true">↗</span>
+                <span className="social-pending"><ArrowUpRightIcon /></span>
               </a>
               <a className="social-item" href="https://www.linkedin.com/in/juliane-mariano-0b16a43a4/" target="_blank" rel="noreferrer noopener" aria-label="Visit Juliane on LinkedIn">
                 <span className="social-icon"><LinkedInIcon /></span>
                 <span>LinkedIn</span>
-                <span className="social-pending" aria-hidden="true">↗</span>
+                <span className="social-pending"><ArrowUpRightIcon /></span>
               </a>
             </div>
           </aside>
@@ -64,9 +65,9 @@ export default function ContactPage() {
       </section>
 
       <footer className="hero-footer motion-enter motion-delay-two">
-        <span>BASED IN SAN ANTONIO, LOS BAÑOS, LAGUNA</span>
+        <span>BASED IN LOS BAÑOS, LAGUNA</span>
         <span>INFORMATION TECHNOLOGY · E-COMMERCE · SUPPORT</span>
-        <a href="/about">ABOUT <span aria-hidden="true">↗</span></a>
+        <a href="/about">ABOUT <span><ArrowUpRightIcon /></span></a>
       </footer>
     </main>
   );

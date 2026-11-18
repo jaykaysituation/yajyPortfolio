@@ -1,3 +1,5 @@
+import { ArrowUpRightIcon } from "../arrow-up-right-icon";
+
 export default function ProjectsPage() {
   return (
     <main className="portfolio-shell projects-page">
@@ -7,7 +9,7 @@ export default function ProjectsPage() {
           <a href="/">HOME</a>
           <a href="/about">BACKGROUND</a>
           <a href="#projects" aria-current="page">PROJECTS</a>
-          <a href="/contact">CONTACT <span aria-hidden="true">↗</span></a>
+          <a href="/contact">CONTACT <span><ArrowUpRightIcon /></span></a>
         </nav>
         <span className="topbar-note">PROJECTS / 03</span>
       </header>
@@ -19,15 +21,32 @@ export default function ProjectsPage() {
         <span className="projects-banner-index" aria-hidden="true">03</span>
       </section>
 
-      <section className="projects-empty motion-enter motion-delay-one" aria-label="Project portfolio">
-        <span>01 / WORK IN PROGRESS</span>
-        <p>Project details are being prepared. Check back soon.</p>
+      <section className="projects-list" aria-label="Upcoming projects">
+        {[1, 2, 3].map((number) => {
+          const projectNumber = String(number).padStart(2, "0");
+
+          return (
+            <article
+              className="project-slot motion-enter"
+              key={projectNumber}
+            >
+              <div className="project-photo-placeholder" role="img" aria-label={`Photo placeholder for project ${number}`}>
+                <span>PHOTO / {projectNumber}</span>
+              </div>
+              <div className="project-description">
+                <span>PROJECT / {projectNumber}</span>
+                <h2>Coming soon</h2>
+                <p>Project description will be added here.</p>
+              </div>
+            </article>
+          );
+        })}
       </section>
 
       <footer className="hero-footer motion-enter motion-delay-two">
-        <span>BASED IN SAN ANTONIO, LOS BAÑOS, LAGUNA</span>
+        <span>BASED IN LOS BAÑOS, LAGUNA</span>
         <span>INFORMATION TECHNOLOGY · E-COMMERCE · SUPPORT</span>
-        <a href="/contact">LET&apos;S CONNECT <span aria-hidden="true">↗</span></a>
+        <a href="/contact">LET&apos;S CONNECT <span><ArrowUpRightIcon /></span></a>
       </footer>
     </main>
   );

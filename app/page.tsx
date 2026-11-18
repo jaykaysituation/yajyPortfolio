@@ -1,3 +1,5 @@
+import { ArrowUpRightIcon } from "./arrow-up-right-icon";
+
 const skills = ["IT foundations", "Shopify operations", "Customer support"];
 
 function SystemsIllustration() {
@@ -35,7 +37,7 @@ export default function Home() {
           <a href="#home">HOME</a>
           <a href="/about">BACKGROUND</a>
           <a href="/projects">PROJECTS</a>
-          <a href="/contact">CONTACT <span aria-hidden="true">↗</span></a>
+          <a href="/contact">CONTACT <span><ArrowUpRightIcon /></span></a>
         </nav>
         <span className="topbar-note">PORTFOLIO / 2026</span>
       </header>
@@ -56,7 +58,7 @@ export default function Home() {
               {skills.map((skill) => <span className="skill-tag home-text-item" key={skill}>{skill}</span>)}
             </div>
             <a className="hero-link home-text-item" href="mailto:julianekm02@gmail.com">
-              GET IN TOUCH <span aria-hidden="true">↗</span>
+              GET IN TOUCH <span><ArrowUpRightIcon /></span>
             </a>
           </div>
           <SystemsIllustration />
@@ -68,7 +70,7 @@ export default function Home() {
       <footer className="hero-footer home-text-motion">
         <span className="home-text-item">BASED IN LOS BAÑOS, LAGUNA</span>
         <span className="home-text-item">INFORMATION TECHNOLOGY · E-COMMERCE · SUPPORT</span>
-        <a className="home-text-item" href="mailto:julianekm02@gmail.com">LET&apos;S CONNECT <span aria-hidden="true">↗</span></a>
+        <a className="home-text-item" href="mailto:julianekm02@gmail.com">LET&apos;S CONNECT <span><ArrowUpRightIcon /></span></a>
       </footer>
     </main>
   );

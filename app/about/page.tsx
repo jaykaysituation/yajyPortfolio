@@ -1,3 +1,5 @@
+import { ArrowUpRightIcon } from "../arrow-up-right-icon";
+
 const education = [
   {
     school: "University of the Philippines, Open University",
@@ -40,7 +42,7 @@ export default function AboutPage() {
           <a href="/">HOME</a>
           <a href="#background">BACKGROUND</a>
           <a href="/projects">PROJECTS</a>
-          <a href="/contact">CONTACT <span aria-hidden="true">↗</span></a>
+          <a href="/contact">CONTACT <span><ArrowUpRightIcon /></span></a>
         </nav>
         <span className="topbar-note">ABOUT / 02</span>
       </header>
@@ -113,9 +115,9 @@ export default function AboutPage() {
       </section>
 
       <footer className="hero-footer">
-        <span>BASED IN SAN ANTONIO, LOS BAÑOS, LAGUNA</span>
+        <span>BASED IN LOS BAÑOS, LAGUNA</span>
         <span>INFORMATION TECHNOLOGY · E-COMMERCE · SUPPORT</span>
-        <a href="mailto:julianekm02@gmail.com">LET&apos;S CONNECT <span aria-hidden="true">↗</span></a>
+        <a href="mailto:julianekm02@gmail.com">LET&apos;S CONNECT <span><ArrowUpRightIcon /></span></a>
       </footer>
     </main>
   );
