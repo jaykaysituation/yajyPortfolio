@@ -260,6 +260,52 @@
 @layer components;
 
 @layer utilities {
+  .sr-only {
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border-width: 0;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    position: absolute;
+    overflow: hidden;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  @media (min-width: 40rem) {
+    .container {
+      max-width: 40rem;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .container {
+      max-width: 48rem;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .container {
+      max-width: 64rem;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .container {
+      max-width: 80rem;
+    }
+  }
+
+  @media (min-width: 96rem) {
+    .container {
+      max-width: 96rem;
+    }
+  }
+
   .overline {
     text-decoration-line: overline;
   }
@@ -648,45 +694,53 @@ h1 {
   display: flex;
 }
 
-.projects-banner {
-  background: var(--red);
-  min-height: 290px;
-  color: var(--paper);
-  padding: 47px 8.5% 42px;
-  position: relative;
+.projects-marquee {
+  border-block: 1px solid var(--ink);
+  background: var(--paper);
+  height: clamp(64px, 8vw, 92px);
+  color: var(--ink);
   overflow: hidden;
 }
 
-.projects-banner .overline span {
-  color: #f1efebad;
+.projects-marquee-window {
+  height: 100%;
+  overflow: hidden;
 }
 
-.projects-banner h1 {
-  z-index: 1;
-  margin: 18px 0 13px;
-  font-size: clamp(4rem, 9vw, 7rem);
-  position: relative;
+.projects-marquee-track, .projects-marquee-group, .projects-marquee-item {
+  align-items: center;
+  display: flex;
 }
 
-.projects-banner > p:last-of-type {
-  z-index: 1;
-  color: #f1efebd6;
-  max-width: 420px;
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.6;
-  position: relative;
+.projects-marquee-track {
+  width: max-content;
+  height: 100%;
 }
 
-.projects-banner-index {
-  color: #f1efeb1c;
-  letter-spacing: -.1em;
-  font-size: clamp(11rem, 28vw, 22rem);
-  font-weight: 700;
+.projects-marquee-group {
+  flex: none;
+  gap: clamp(24px, 4vw, 58px);
+  padding-right: clamp(24px, 4vw, 58px);
+}
+
+.projects-marquee-item {
+  letter-spacing: -.055em;
+  white-space: nowrap;
+  flex: none;
+  gap: clamp(24px, 4vw, 58px);
+  font-size: clamp(2rem, 4.5vw, 3.8rem);
   line-height: 1;
-  position: absolute;
-  bottom: -.28em;
-  right: 8%;
+}
+
+.projects-marquee-star {
+  color: var(--red);
+  font-size: .6em;
+}
+
+@keyframes projects-marquee-scroll {
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .projects-list {
@@ -1114,22 +1168,6 @@ h1 {
     animation-delay: .3s;
   }
 
-  .about-page .skills-group {
-    animation: .65s cubic-bezier(.2, .75, .2, 1) both about-enter;
-  }
-
-  .about-page .skills-group:nth-of-type(2) {
-    animation-delay: .1s;
-  }
-
-  .about-page .skills-group:nth-of-type(3) {
-    animation-delay: .18s;
-  }
-
-  .about-page .skills-group:nth-of-type(4) {
-    animation-delay: .26s;
-  }
-
   @keyframes about-enter {
     from {
       opacity: 0;
@@ -1140,6 +1178,23 @@ h1 {
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  .projects-marquee[data-entered="true"] .projects-marquee-track {
+    animation: 28s linear infinite projects-marquee-scroll;
+  }
+
+  .scroll-reveal[data-scroll-ready="true"] .motion-enter:not([data-entered="true"]) {
+    opacity: 0;
+    animation-name: none;
+    transform: translateY(14px);
+  }
+
+  .scroll-reveal .motion-enter[data-entered="true"] {
+    animation-name: about-enter;
+    animation-duration: .65s;
+    animation-timing-function: cubic-bezier(.2, .75, .2, 1);
+    animation-fill-mode: both;
   }
 }
 
@@ -1293,21 +1348,6 @@ h1 {
     padding: 35px 22px 38px;
   }
 
-  .projects-banner {
-    min-height: 245px;
-    padding: 36px 22px 32px;
-  }
-
-  .projects-banner h1 {
-    margin: 15px 0 11px;
-    font-size: clamp(3.5rem, 15vw, 5.4rem);
-  }
-
-  .projects-banner > p:last-of-type {
-    max-width: 310px;
-    font-size: 13px;
-  }
-
   .projects-list {
     padding: 0 22px;
   }
@@ -1345,6 +1385,25 @@ h1 {
 @media (prefers-reduced-motion: reduce) {
   .hero-link, .hero-footer a, .about-skills .skill-tag, .skill-list .skill-tag, .portrait-next-link {
     transition: none;
+  }
+
+  .projects-marquee-track {
+    justify-content: center;
+    width: 100%;
+    transform: none;
+  }
+
+  .projects-marquee-group {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .projects-marquee-group + .projects-marquee-group, .projects-marquee-item:nth-child(n+2) {
+    display: none;
+  }
+
+  .projects-marquee-item {
+    gap: 14px;
   }
 }
 

@@ -1,5 +1,9 @@
 import Image from "next/image";
 import { ArrowUpRightIcon } from "./arrow-up-right-icon";
+import { AboutSection } from "./sections/about-section";
+import { ProjectsSection } from "./sections/projects-section";
+import { ContactSection } from "./sections/contact-section";
+import { ScrollReveal } from "./scroll-reveal";
 
 const skills = ["IT foundations", "Shopify operations", "Customer support"];
 
@@ -25,9 +29,9 @@ export default function Home() {
         <a className="wordmark" href="#home" aria-label="Juliane Mariano home">JM<span>.</span></a>
         <nav className="navigation" aria-label="Main navigation">
           <a href="#home">HOME</a>
-          <a href="/about">BACKGROUND</a>
-          <a href="/projects">PROJECTS</a>
-          <a href="/contact">CONTACT <span><ArrowUpRightIcon /></span></a>
+          <a href="#background">BACKGROUND</a>
+          <a href="#projects">PROJECTS</a>
+          <a href="#contact">CONTACT <span><ArrowUpRightIcon /></span></a>
         </nav>
         <span className="topbar-note">PORTFOLIO / 2026</span>
       </header>
@@ -41,7 +45,7 @@ export default function Home() {
           <PortraitIllustration />
           <div className="portrait-side-rail">
             <span className="art-index">LAGUNA · PHILIPPINES</span>
-            <a className="portrait-next-link" href="/about" aria-label="Go to the Background page">
+            <a className="portrait-next-link" href="#background" aria-label="Go to the Background section">
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
                 <path d="M4 12h16M13 5l7 7-7 7" />
               </svg>
@@ -69,11 +73,17 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="hero-footer motion-enter motion-delay-two">
-        <span>BASED IN LOS BAÑOS, LAGUNA</span>
-        <span>INFORMATION TECHNOLOGY · E-COMMERCE · SUPPORT</span>
-        <a href="mailto:julianekm02@gmail.com">LET&apos;S CONNECT <span><ArrowUpRightIcon /></span></a>
-      </footer>
+      <ScrollReveal>
+        <AboutSection />
+        <ProjectsSection />
+        <ContactSection />
+
+        <footer className="hero-footer motion-enter motion-delay-two">
+          <span>BASED IN LOS BAÑOS, LAGUNA</span>
+          <span>INFORMATION TECHNOLOGY · E-COMMERCE · SUPPORT</span>
+          <a href="mailto:julianekm02@gmail.com">LET&apos;S CONNECT <span><ArrowUpRightIcon /></span></a>
+        </footer>
+      </ScrollReveal>
     </main>
   );
 }
