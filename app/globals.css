@@ -213,21 +213,9 @@ h1 { margin: 0; font-size: clamp(4rem, 10.2vw, 8.5rem); line-height: 0.96; font-
   .motion-enter { animation: about-enter 650ms cubic-bezier(0.2, 0.75, 0.2, 1) both; }
   .motion-delay-one { animation-delay: 130ms; }
   .motion-delay-two { animation-delay: 240ms; }
-  .home-text-item { animation: about-enter 650ms cubic-bezier(0.2, 0.75, 0.2, 1) both; }
   .projects-list .project-slot:nth-child(1) { animation-delay: 100ms; }
   .projects-list .project-slot:nth-child(2) { animation-delay: 200ms; }
   .projects-list .project-slot:nth-child(3) { animation-delay: 300ms; }
-  .nameplate .home-text-item:first-child { animation-delay: 0ms; }
-  .nameplate .home-text-item:nth-child(2) { animation-delay: 100ms; }
-  .hero-details-intro .home-text-item:nth-child(1) { animation-delay: 850ms; }
-  .hero-details-intro .home-text-item:nth-child(2) { animation-delay: 950ms; }
-  .hero-details-actions .skill-tag:nth-child(1) { animation-delay: 1050ms; }
-  .hero-details-actions .skill-tag:nth-child(2) { animation-delay: 1130ms; }
-  .hero-details-actions .skill-tag:nth-child(3) { animation-delay: 1210ms; }
-  .hero-details-actions > .hero-link { animation-delay: 1290ms; }
-  .hero-footer > .home-text-item:nth-child(1) { animation-delay: 1390ms; }
-  .hero-footer > .home-text-item:nth-child(2) { animation-delay: 1490ms; }
-  .hero-footer > .home-text-item:nth-child(3) { animation-delay: 1590ms; }
   .about-page .skills-group { animation: about-enter 650ms cubic-bezier(0.2, 0.75, 0.2, 1) both; }
   .about-page .skills-group:nth-of-type(2) { animation-delay: 100ms; }
   .about-page .skills-group:nth-of-type(3) { animation-delay: 180ms; }
@@ -282,11 +270,6 @@ h1 { margin: 0; font-size: clamp(4rem, 10.2vw, 8.5rem); line-height: 0.96; font-
   .contact-heading h1 { font-size: clamp(3.5rem, 15vw, 5.4rem); }
   .contact-layout { grid-template-columns: 1fr; gap: 34px; margin-top: 26px; }
   .social-heading { margin-top: 27px; }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .portrait-image { animation: portrait-arrive 700ms cubic-bezier(0.2, 0.75, 0.2, 1) 180ms both; }
-  @keyframes portrait-arrive { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1102,10 +1102,6 @@ h1 {
     animation-delay: .24s;
   }
 
-  .home-text-item {
-    animation: .65s cubic-bezier(.2, .75, .2, 1) both about-enter;
-  }
-
   .projects-list .project-slot:first-child {
     animation-delay: .1s;
   }
@@ -1116,50 +1112,6 @@ h1 {
 
   .projects-list .project-slot:nth-child(3) {
     animation-delay: .3s;
-  }
-
-  .nameplate .home-text-item:first-child {
-    animation-delay: 0s;
-  }
-
-  .nameplate .home-text-item:nth-child(2) {
-    animation-delay: .1s;
-  }
-
-  .hero-details-intro .home-text-item:first-child {
-    animation-delay: .85s;
-  }
-
-  .hero-details-intro .home-text-item:nth-child(2) {
-    animation-delay: .95s;
-  }
-
-  .hero-details-actions .skill-tag:first-child {
-    animation-delay: 1.05s;
-  }
-
-  .hero-details-actions .skill-tag:nth-child(2) {
-    animation-delay: 1.13s;
-  }
-
-  .hero-details-actions .skill-tag:nth-child(3) {
-    animation-delay: 1.21s;
-  }
-
-  .hero-details-actions > .hero-link {
-    animation-delay: 1.29s;
-  }
-
-  .hero-footer > .home-text-item:first-child {
-    animation-delay: 1.39s;
-  }
-
-  .hero-footer > .home-text-item:nth-child(2) {
-    animation-delay: 1.49s;
-  }
-
-  .hero-footer > .home-text-item:nth-child(3) {
-    animation-delay: 1.59s;
   }
 
   .about-page .skills-group {
@@ -1387,24 +1339,6 @@ h1 {
 
   .social-heading {
     margin-top: 27px;
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .portrait-image {
-    animation: .7s cubic-bezier(.2, .75, .2, 1) .18s both portrait-arrive;
-  }
-
-  @keyframes portrait-arrive {
-    from {
-      opacity: 0;
-      transform: translateY(18px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
 }
 
